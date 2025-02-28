@@ -1,0 +1,32 @@
+- Encryption
+	- Symmetric
+		- examples
+		- uses
+		- keys used
+	- A-Symmetric
+		- examples
+		- uses
+		- keys used
+- encryption A-Symmetric to Symmetric
+- Hash function
+	- diagram
+	- uses
+	- algorithms
+	- Digital signature
+		- use
+		- how
+		- examples
+- TLS
+- PKI
+	- entities
+- Certificates
+- CRL
+	- OCSP
+- X.509Extensions
+- Fields
+	- Serial Number
+	- Thumbprint
+	- Signature Algorithm
+	- CDP
+	- NotBefore & NotAfter
+	- 

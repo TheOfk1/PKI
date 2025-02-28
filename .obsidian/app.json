@@ -1,1 +1,6 @@
-{}
+{
+  "vimMode": true,
+  "showLineNumber": true,
+  "strictLineBreaks": true,
+  "useMarkdownLinks": true
+}
