@@ -1,4 +1,4 @@
-- Encryption
+- [Encryption](<Encryption>)
 	- Symmetric
 		- examples
 		- uses
@@ -28,5 +28,24 @@
 	- Thumbprint
 	- Signature Algorithm
 	- CDP
-	- NotBefore & NotAfter
-	- 
+	- Not Before & Not After
+	- CDP
+	- Expiration Time
+	- Issuer
+	- Subject
+	- SAN
+	- Key Usage & Extended Key Usage
+	- AIA
+- Certificate file types
+- Certificate templates
+- Chain of trusts
+	- Certificate levels (intermediate, root)
+	- Trusted certificates
+- Certificate types
+	- EV
+	- OV
+	- DV
+	-  custom fields
+- OpenSSL
+- TLS attacks
+- certutil
