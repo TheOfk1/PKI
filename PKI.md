@@ -29,7 +29,6 @@
 	- Signature Algorithm
 	- CDP
 	- Not Before & Not After
-	- CDP
 	- Expiration Time
 	- Issuer
 	- Subject

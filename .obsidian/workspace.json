@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Questions"
             }
+          },
+          {
+            "id": "11dd1b349554ffed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Transport Layer Security.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Transport Layer Security"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "78a07cbe2fdbd33f",
@@ -114,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PKI.md",
+                "file": "Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +139,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for PKI"
+              "title": "Backlinks for Questions"
             }
           },
           {
@@ -133,12 +148,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PKI.md",
+                "file": "Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from PKI"
+              "title": "Outgoing links from Questions"
             }
           },
           {
@@ -162,13 +177,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PKI.md",
+                "file": "Questions.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of PKI"
+              "title": "Outline of Questions"
             }
           }
         ]
@@ -189,9 +204,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "558caa0a7640510b",
+  "active": "11dd1b349554ffed",
   "lastOpenFiles": [
     "Questions.md",
+    "PKI.md",
+    "Untitled.md",
     "Assets/pki-entities.png",
     "Assets/pki-entities.png.crdownload",
     "Assets/tls-cipher-suite.png",
@@ -199,7 +216,6 @@
     "Assets",
     "Transport Layer Security.md",
     "Links.md",
-    "PKI.md",
     "Encryption.md",
     "Welcome.md"
   ]
