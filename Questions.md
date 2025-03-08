@@ -61,7 +61,6 @@
 ## Certificates
 - What is it? (electronic document used to prove identity)
 - What are some examples of certificates uses? (email, digital signature, TLS)
-- What can be inside of a SAN?
 - Where are certificates stored in a windows machine? What types of store are there? (certificate store, user, machine)
 - How can you distribute certificates? (GPO)
 - What are wildcard certificates? (uses asterisk in domain name)
@@ -101,7 +100,34 @@
 - What is the thumbprint used for? What other name for it is there? (Identifying the certificate, fingerprint)
 - What is the signature? (the digital signature method and hash used)
 - What is a CDP? (CRL distribution point, the endpoint to get the CRL)
+- What is the not before and not after fields? Why do they exist?
+- What is the Issuer and subject fields? How do they look? (look like a common name)
+	- What is the subject field used for? Is there another field for that purpose? (verify name of the service accessed, the SAN can also be usefull)
+- What is the SAN field? What can be a part of it? (Email, DNS, IP, URI)
+	- What is the SAN field used for? (verify service)
+	- What is the difference between the subject field and the SAN? (SAN can hold multiple fields)
+- What is the key usage and extended key usage fields? Why do they exist? (minimize damage if certificate is compromised)
+	- Give some examples of key usages
+		- digital signature
+		- data encipherment
+		- certificate signing
+		- key agreement
+	- Give some examples of extended key usages
+		- server authentication
+		- client authentication
+		- code signing
+		- email protection
+	- Can you start a TLS session with a server that doesn't have the server authentication EKU?
+	- $\color{blue}\text{Not Needed}$ How are key usages and extended key usages identified? (OID)
+	- $\color{blue}\text{Not Needed}$ What is the relationship between key usages and extended key usages? Which one is applied?
+## OpenSSL
+- What is OpenSSL? Give some examples of things it can do
+	- It is an open source cryptographic library. It can provide TLS implementation, encryption algorithm and hash implementations, key generation, creating certificates and more
+## TLS attacks
+- What is SSL stripping? ![SSL stripping](./Assets/ssl-stripping-attack.png)
+- What is heart bleed?
 ## Extra
 - What is the zero trust approach?
 - What is a zero knowledge proof?
 - Quantum computers
+- What component of windows handles secure communications? (SSPI's schannel)
