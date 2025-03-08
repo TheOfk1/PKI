@@ -26,7 +26,7 @@
 - What are some examples of hashing algorithms? (SHA256, MD4)
 - Lets say I found the password hash for a user, how would I go about breaking it? What mitigates this threat? (rainbow table, salt)
 - What is the difference between a hash function and an encryption? (use cases, hash is irreversible)
-- $\color{blue}{\text{Not Needed}}$ What is the difference between a hash function and an HMAC? (HMAC uses a secret key as well)
+- $\color{blue}\text{Not Needed}$ What is the difference between a hash function and an HMAC? (HMAC uses a secret key as well)
 #### Digital signature
 - What is a digital signature? (combination of hash and encryption for integrity, authenticity. Equivalent of actual signatures)
 - Examples (documents, certificates, software, block chains)
@@ -39,13 +39,13 @@
 [TLS](<Transport Layer Security>)
 - What is it? (protocol used to transfer data securely)
 - How many versions are there? What came before it?
-- <font color="Blue">Not Needed</font> What is the difference between TLS 1.2 and TLS 1.1?
+- $\color{blue}\text{Not Needed}$ What is the difference between TLS 1.2 and TLS 1.1?
 - Explain the TLS protocol in detail
 - What is a cipher suite? What does each part mean? ![tls-cipher-stuite.png](./Assets/tls-cipher-suite.png)
 - Why do you need a client and server random? (protect from replay attacks)
 - What is elliptic curve cryptography? (same principals, harder to reverse)
 - What is mutual TLS? What does it add to the current protocol?
-- <font color="Red">Bonus</font> What are the protocol extensions in the client hello?
+- $\color{red}\text{Bonus:}$ What are the protocol extensions in the client hello?
 - If the server has a private / public pair, then why even use TLS? Why not just use the servers public key?
 ## Rivest Shamir Adleman
 - What does the abbreviation stand for?
@@ -80,12 +80,15 @@
 - If the certificate is sent during the TLS handshake, what's stopping me from stealing it? What happens if I do manage to find the private key?
 #### Certificate Revocation List
 - What is a CRL?
-- Why would you want to revoke certificate?
-- How can I know a CRL hasn't been changed?
+- Why would you want to revoke certificate? (it is compromised)
+- How can I know a CRL hasn't been changed? (It is signed)
 ###### Online Certificate Status Protocol
-- What is the OCSP protocol?
-- <font color="Blue">Not Needed</font> Where is the OCSP URI saved? (Authority Information Access)
-- What OCSP stapling?
+- What is the OCSP protocol? (over http, gets status of certificate)
+- $\color{blue}\text{Not Needed}$ Where is the OCSP URI saved? (Authority Information Access)
+- What OCSP stapling? (Server gets OCSP response with a timestamp and staples it to the message sent back to the client)
+	- What is the advantage of OCSP over a CRL?
+- Which would you like to use, OCSP or CRLs? (CRLs don't expose what sites client access, they provide less workload, and OCSP is over plain http)
+- $\color{blue}\text{Not Needed}$ Is OCSP still supported?
 #### Chain of trust
 - What's stopping me from issuing a certificate to impersonate an entity?
 - What is a chain of trust?
