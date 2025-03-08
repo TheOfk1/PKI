@@ -26,7 +26,7 @@
 - What are some examples of hashing algorithms? (SHA256, MD4)
 - Lets say I found the password hash for a user, how would I go about breaking it? What mitigates this threat? (rainbow table, salt)
 - What is the difference between a hash function and an encryption? (use cases, hash is irreversible)
-- <font color = "Blue">Not Needed</font> What is the difference between a hash function and an HMAC? (HMAC uses a secret key aswell)
+- $\color{blue}{\text{Not Needed}}$ What is the difference between a hash function and an HMAC? (HMAC uses a secret key as well)
 #### Digital signature
 - What is a digital signature? (combination of hash and encryption for integrity, authenticity. Equivalent of actual signatures)
 - Examples (documents, certificates, software, block chains)
@@ -78,12 +78,26 @@
 	- Organization validation - CA also confirms the business is registered
 	- Enterprise validation - 9 rigorous steps of validation - was previously given a green highlight in a browser
 - If the certificate is sent during the TLS handshake, what's stopping me from stealing it? What happens if I do manage to find the private key?
+#### Certificate Revocation List
+- What is a CRL?
+- Why would you want to revoke certificate?
+- How can I know a CRL hasn't been changed?
+###### Online Certificate Status Protocol
+- What is the OCSP protocol?
+- <font color="Blue">Not Needed</font> Where is the OCSP URI saved? (Authority Information Access)
+- What OCSP stapling?
 #### Chain of trust
 - What's stopping me from issuing a certificate to impersonate an entity?
 - What is a chain of trust?
 - What are intermediate CAs? What are root CAs? Who signs the certificates of each one?
-- Why is there both intermediate and root CAs?
+- Why are there both intermediate and root CAs?
 - How can I trust root CAs?
+#### X.509 Extensions
+- What is the X.509 format? (set of extensions for certificates, CSR's, CRL's)
+- What is a serial number? Is the serial number enough to identify the certificate? What is a thumbprint? What's the difference?
+- What is the thumbprint used for? What other name for it is there? (Identifying the certificate, fingerprint)
+- What is the signature? (the digital signature method and hash used)
+- What is a CDP? (CRL distribution point, the endpoint to get the CRL)
 ## Extra
 - What is the zero trust approach?
 - What is a zero knowledge proof?
