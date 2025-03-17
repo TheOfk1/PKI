@@ -14,6 +14,7 @@
 	- Security
 	- Key distribution
 	- Uses (encrypt data in database or file, digital signatures)
+	- Examples (Kerberos, LDAP/TLS, Whats App)
 	- Algorithms (RSA, ECC, AES, DES, RC4)
 - How is symmetric encryption used with a-symmetric encryption? (agree on secret)
 - What is bit strength? 
@@ -33,6 +34,7 @@
 ## Diffie Hellman
 - What if there is an attacker?
 - Should we event do this?
+- $\color{Red}\text{Bonus}$ What is the discrete logarithm problem
 ## RSA
 - Should we even do this?
 ## TLS
@@ -62,6 +64,8 @@
 - What is it? (electronic document used to prove identity)
 - What are some examples of certificates uses? (email, digital signature, TLS)
 - Where are certificates stored in a windows machine? What types of store are there? (certificate store, user, machine)
+- How can you view machine certificates, How can you view user certificates?
+- Say you created a self signed certificate, how can you make it so that your computer trusts it? What permissions are required to do so?
 - How can you distribute certificates? (GPO)
 - What are wildcard certificates? (uses asterisk in domain name)
 - How can you save a certificate?
@@ -76,11 +80,12 @@
 	- Domain validation - CA confirms ownership of the domain name
 	- Organization validation - CA also confirms the business is registered
 	- Enterprise validation - 9 rigorous steps of validation - was previously given a green highlight in a browser
-- If the certificate is sent during the TLS handshake, what's stopping me from stealing it? What happens if I do manage to find the private key?
+- If the certificate is sent during the TLS handshake, what's stopping me from stealing it? What doesn't the certificate contain? Where is the private key saved? What happens if someone finds it?
 #### Certificate Revocation List
-- What is a CRL?
+- What is a CRL? Who publishes it?
 - Why would you want to revoke certificate? (it is compromised)
 - How can I know a CRL hasn't been changed? (It is signed)
+- Where can we see the URL for the CRL? (CDP)
 ###### Online Certificate Status Protocol
 - What is the OCSP protocol? (over http, gets status of certificate)
 - $\color{blue}\text{Not Needed}$ Where is the OCSP URI saved? (Authority Information Access)
@@ -96,13 +101,13 @@
 - How can I trust root CAs?
 #### X.509 Extensions
 - What is the X.509 format? (set of extensions for certificates, CSR's, CRL's)
-- What is a serial number? Is the serial number enough to identify the certificate? What is a thumbprint? What's the difference?
+- What is a serial number? Is it unique? What is a thumbprint? What's the difference?
 - What is the thumbprint used for? What other name for it is there? (Identifying the certificate, fingerprint)
 - What is the signature? (the digital signature method and hash used)
 - What is a CDP? (CRL distribution point, the endpoint to get the CRL)
 - What is the not before and not after fields? Why do they exist?
 - What is the Issuer and subject fields? How do they look? (look like a common name)
-	- What is the subject field used for? Is there another field for that purpose? (verify name of the service accessed, the SAN can also be usefull)
+	- What is the subject field used for? Is there another field for that purpose? (verify name of the service accessed, the SAN can also be useful)
 - What is the SAN field? What can be a part of it? (Email, DNS, IP, URI)
 	- What is the SAN field used for? (verify service)
 	- What is the difference between the subject field and the SAN? (SAN can hold multiple fields)
@@ -117,15 +122,18 @@
 		- client authentication
 		- code signing
 		- email protection
-	- Can you start a TLS session with a server that doesn't have the server authentication EKU?
-	- $\color{blue}\text{Not Needed}$ How are key usages and extended key usages identified? (OID)
-	- $\color{blue}\text{Not Needed}$ What is the relationship between key usages and extended key usages? Which one is applied?
+- What is the relationship between key usages and EKU? ![key-usage-extended](./Assets/eku.png)
+- Can you start a TLS session with a server that doesn't have the server authentication EKU?
+- What is the difference between a signature algorithm and a signature hash algorithm?
+- $\color{blue}\text{Not Needed}$ How are key usages and extended key usages identified? (OID)
+- $\color{blue}\text{Not Needed}$ What is the relationship between key usages and extended key usages? Which one is applied?
 ## OpenSSL
 - What is OpenSSL? Give some examples of things it can do
 	- It is an open source cryptographic library. It can provide TLS implementation, encryption algorithm and hash implementations, key generation, creating certificates and more
 ## TLS attacks
 - What is SSL stripping? ![SSL stripping](./Assets/ssl-stripping-attack.png)
 - What is heart bleed?
+- What is a MiTM attack?
 ## Extra
 - What is the zero trust approach?
 - What is a zero knowledge proof?
