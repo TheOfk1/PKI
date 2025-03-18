@@ -1,61 +1,58 @@
 ## Encryption
 - What is encryption? (an algorithm used to transform data so that only authorized parties may be able to see it)
-- What are the uses of encryption? (protect data from being stolen or changed)
-- How does encryption protect the data? Why can't I just reverse the algorithm? (There is a use of a secret key that is known only by select parties)
-- If I wanted to break a strong encryption, What would I need to do? (brute force the key)
+- What are the uses of encryption? (protect data from being stolen or changed, 2 examples)
+	- What are some real life scenarios where you use encryption? (Whatsapp, browsing, Ubbi dubbi)
+- How does encryption protect data? Why can't I just reverse the algorithm? (There is a use of a secret key that is known only by select parties)
+- As an attacker, What would I want to gain access to?
+- When a strong encryption algorithm is used, what would we need to do to find the secret key?
 - What are some examples of encryptions? Which one is the one we prefer using today? What reasons are there for it being strong? (AES, DES, RC4. AES is currently considered the standard, their strength comes from their key size and the amount of cycles)
-- What is the disadvantage for to large a key size? What about the number of cycles? (slower)
-- Why is the XOR cipher weak? (only one plaintext to break + you can guess parts of the key at a time)
-- What are some real life scenarios where you use encryption? (Whatsapp, browsing, Ubbi dubbi)
+	- What is the difference between AES128 and AES256, which is stronger? Why?
+	- What is the difference between DES and 3DES, which is stronger? Why?
+- $\color{Blue}\text{Not Needed}$ What is bit strength? (The magnitude of actions needed to break the encryption)
+- What is the disadvantage for too large a key size? What about the number of cycles? (slower)
+- $\color{Red}\text{Bonus}$ Why is the XOR cipher weak? (only one plaintext to break + you can guess parts of the key at a time)
 - What types of encryption are there? (Symmetric, A-Symmetric)
-- Compare symmetric and a-symmetric encryption
+- Compare Symmetric and A-Symmetric encryption
 	- Keys used
 	- Speed
-	- Security
 	- Key distribution
 	- Uses (encrypt data in database or file, digital signatures)
-	- Examples (Kerberos, LDAP/TLS, Whats App)
+	- Examples (Kerberos, LDAP/TLS, What's App)
 	- Algorithms (RSA, ECC, AES, DES, RC4)
-- How is symmetric encryption used with a-symmetric encryption? (agree on secret)
-- What is bit strength? 
-- What mathematical principal does A-Symmetric encryption rely on? (integer factorization)
+	- $\color{Red}\text{Bonus}$ Security
+- What is the problem with Symmetric encryption (regarding the shared secret)? How can you solve that problem?
+- $\color{Blue}\text{Not Needed}$ What mathematical principal does A-Symmetric encryption rely on? (integer factorization)
 ## Hash
 - What is a hashing function? (fixed size output, deterministic)
 - What are its uses? (password storage, data signature, checksum, key derivation, blockchains)
-- What important properties does it have? (one way, collision resistant, uniform, avalanche)
-- What does it mean if there is a hash collision? Can two different passwords work?
+- What important properties does it have? What is the difference between a hash function and encryption? (one way, collision resistant, uniform, avalanche. uses, irreversible)
 - What are some examples of hashing algorithms? (SHA256, MD4)
-- Lets say I found the password hash for a user, how would I go about breaking it? What mitigates this threat? (rainbow table, salt)
-- What is the difference between a hash function and an encryption? (use cases, hash is irreversible)
+- What does it mean if there is a hash collision? Can two different passwords work?
+- Lets say we found the password hash for a user, how would we find the password from the hash? What mitigates this threat? (rainbow table, salt)
 - $\color{blue}\text{Not Needed}$ What is the difference between a hash function and an HMAC? (HMAC uses a secret key as well)
 #### Digital signature
-- What is a digital signature? (combination of hash and encryption for integrity, authenticity. Equivalent of actual signatures)
-- Examples (documents, certificates, software, block chains)
+- What is a digital signature? Why is it named so? (combination of hash and encryption for integrity, authenticity. Equivalent of actual signatures)
+- How does it relate to certificates?
+- Examples (documents, certificates, software, email)
 ## Diffie Hellman
-- What if there is an attacker?
-- Should we event do this?
-- $\color{Red}\text{Bonus}$ What is the discrete logarithm problem
+- How does it work?
+- What attack is there on Diffie Hellman? (MiTM)
+- $\color{Red}\text{Bonus}$ What is the discrete logarithm problem?
 ## RSA
-- Should we even do this?
+- How does it work?
+- What is the abbreviation stand for?
 ## TLS
 [TLS](<Transport Layer Security>)
 - What is it? (protocol used to transfer data securely)
-- How many versions are there? What came before it?
-- $\color{blue}\text{Not Needed}$ What is the difference between TLS 1.2 and TLS 1.1?
+- How many versions are there? What came before it? (SSL 3.0, TLS 1.3)
+- $\color{blue}\text{Not Needed}$ What is the difference between TLS 1.3 and TLS 1.2 and TLS 1.1?
 - Explain the TLS protocol in detail
 - What is a cipher suite? What does each part mean? ![tls-cipher-stuite.png](./Assets/tls-cipher-suite.png)
 - Why do you need a client and server random? (protect from replay attacks)
-- What is elliptic curve cryptography? (same principals, harder to reverse)
+- $\color{Blue}\text{No Needed}$ What is elliptic curve cryptography? (same principals, harder to reverse)
 - What is mutual TLS? What does it add to the current protocol?
 - $\color{red}\text{Bonus:}$ What are the protocol extensions in the client hello?
-- If the server has a private / public pair, then why even use TLS? Why not just use the servers public key?
-## Rivest Shamir Adleman
-- What does the abbreviation stand for?
-- How does it work?
-## Diffie Hellmen
-- What is it used for?
-- How does it work?
-- What stops man in the middle attacks?
+- If the server has a private / public pair, then why even use TLS? Why not just use the servers public key? (Certificate fields)
 ## Public Key Infrastructure
 - What is a PKI? (entities, roles, policies and software to allow the use of certificates and public key cryptography)
 - How does a PKI infrastructure help prevent man in the middle attacks?

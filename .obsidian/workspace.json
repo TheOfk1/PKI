@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "Questions"
             }
+          },
+          {
+            "id": "a21e76b66e316e21",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Transport Layer Security.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Transport Layer Security"
+            }
           }
         ]
       }
@@ -171,12 +185,12 @@
   },
   "active": "5868080304e64f7e",
   "lastOpenFiles": [
+    "Transport Layer Security.md",
+    "Questions.md",
     "Assets/eku.png",
     "Assets/ssl-stripping-attack.png",
     "Assets/ssl-stripping-attack.png.crdownload",
     "PKI.md",
-    "Questions.md",
-    "Transport Layer Security.md",
     "Untitled.md",
     "Assets/pki-entities.png",
     "Assets/pki-entities.png.crdownload",
