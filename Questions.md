@@ -31,12 +31,7 @@
 #### Digital signature
 - What is a digital signature? (combination of hash and encryption for integrity, authenticity. Equivalent of actual signatures)
 - Examples (documents, certificates, software, block chains)
-## Diffie Hellman
-- What if there is an attacker?
 - Should we event do this?
-- $\color{Red}\text{Bonus}$ What is the discrete logarithm problem
-## RSA
-- Should we even do this?
 ## TLS
 [TLS](<Transport Layer Security>)
 - What is it? (protocol used to transfer data securely)
@@ -50,24 +45,26 @@
 - $\color{red}\text{Bonus:}$ What are the protocol extensions in the client hello?
 - If the server has a private / public pair, then why even use TLS? Why not just use the servers public key?
 ## Rivest Shamir Adleman
-- What does the abbreviation stand for?
+- $\color{Blue}\text{Not Needed}$ What does the abbreviation stand for?
+	- What is the nationalism of Shamir?
 - How does it work?
-## Diffie Hellmen
+## Diffie Hellman
 - What is it used for?
 - How does it work?
-- What stops man in the middle attacks?
+- $\color{Red}\text{Bonus}$ What is the discrete logarithm problem?
 ## Public Key Infrastructure
 - What is a PKI? (entities, roles, policies and software to allow the use of certificates and public key cryptography)
-- How does a PKI infrastructure help prevent man in the middle attacks?
-- Who are the entities of a PKI infrastructure? (registration authority, certification authority, certificate distribution point, OSCP endpoint) ![pki-entities](./Assets/pki-entities.png)
+- $\color{blue}\text{Not  Needed}$ Who are the entities of a PKI infrastructure? (registration authority, certification authority, certificate distribution point, OSCP endpoint) ![pki-entities](./Assets/pki-entities.png)
 ## Certificates
 - What is it? (electronic document used to prove identity)
-- What are some examples of certificates uses? (email, digital signature, TLS)
+- Give some examples for certificate uses (email, digital signature, TLS)
 - Where are certificates stored in a windows machine? What types of store are there? (certificate store, user, machine)
-- How can you view machine certificates, How can you view user certificates?
-- Say you created a self signed certificate, how can you make it so that your computer trusts it? What permissions are required to do so?
-- How can you distribute certificates? (GPO)
-- What are wildcard certificates? (uses asterisk in domain name)
+	- If I need to change a certificate for a web server, what certificate store will I access?
+- How can you view machine certificates, How can you view user certificates? (certlm.msc, certmgr.msc)
+- How can you add a certificate to the certificate store? (Install certificate)
+- What is a self signed certificate? How can you trust it?
+- How can you distribute certificates in a domain environment? (GPO)
+- $\color{Red}\text{Bonus}$ What are wildcard certificates? (uses asterisk in domain name)
 - How can you save a certificate?
 	- CSR - Certificate signing request
 	- CRL - Certificate revocation list
@@ -76,29 +73,32 @@
 	- PEM - Encoding of certificates, may have private key
 	- KEY - Holds PEM encoded private key
 - What are certificate templates? (predefined structure used to create certificates)
-- What are the certificate validation types? How do you know the extended verification of a certificate? (based on the certificate policies extension)
+- Can you create certificate templates?
+- What are the certificate validation types? $\color{blue}\text{Not Needed}$ How do you know the extended verification of a certificate? (based on the certificate policies extension)
 	- Domain validation - CA confirms ownership of the domain name
 	- Organization validation - CA also confirms the business is registered
 	- Enterprise validation - 9 rigorous steps of validation - was previously given a green highlight in a browser
 - If the certificate is sent during the TLS handshake, what's stopping me from stealing it? What doesn't the certificate contain? Where is the private key saved? What happens if someone finds it?
+- $\color{blue}\text{Not Needed}$ Can you trust a certificate from the future?
 #### Certificate Revocation List
 - What is a CRL? Who publishes it?
-- Why would you want to revoke certificate? (it is compromised)
-- How can I know a CRL hasn't been changed? (It is signed)
-- Where can we see the URL for the CRL? (CDP)
+- How can we know a CRL hasn't been changed? (It is signed)
+- What are some examples of fields of the CRL? (effective date, next update)
+- What is a CRL cache? Why does it exist?
 ###### Online Certificate Status Protocol
 - What is the OCSP protocol? (over http, gets status of certificate)
 - $\color{blue}\text{Not Needed}$ Where is the OCSP URI saved? (Authority Information Access)
-- What OCSP stapling? (Server gets OCSP response with a timestamp and staples it to the message sent back to the client)
+- $\color{blue}\text{Not Needed}$ What OCSP stapling? (Server gets OCSP response with a timestamp and staples it to the message sent back to the client)
 	- What is the advantage of OCSP over a CRL?
 - Which would you like to use, OCSP or CRLs? (CRLs don't expose what sites client access, they provide less workload, and OCSP is over plain http)
 - $\color{blue}\text{Not Needed}$ Is OCSP still supported?
 #### Chain of trust
-- What's stopping me from issuing a certificate to impersonate an entity?
-- What is a chain of trust?
+- What is a chain of trust? What would happen without it?
+	- What's stopping us from issuing a certificate in the name of google and impersonating them?
 - What are intermediate CAs? What are root CAs? Who signs the certificates of each one?
-- Why are there both intermediate and root CAs?
-- How can I trust root CAs?
+- You got a new computer, how is it that you trust googles certificate?
+- Why is there intermediate and root CAs? Why not only root CAs? (revoke is easier, intermediate is accessible over the network)
+- Where do you think our root CA is located?
 #### X.509 Extensions
 - What is the X.509 format? (set of extensions for certificates, CSR's, CRL's)
 - What is a serial number? Is it unique? What is a thumbprint? What's the difference?
@@ -133,7 +133,6 @@
 ## TLS attacks
 - What is SSL stripping? ![SSL stripping](./Assets/ssl-stripping-attack.png)
 - What is heart bleed?
-- What is a MiTM attack?
 ## Extra
 - What is the zero trust approach?
 - What is a zero knowledge proof?
