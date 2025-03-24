@@ -99,18 +99,18 @@
 - You got a new computer, how is it that you trust googles certificate?
 - Why is there intermediate and root CAs? Why not only root CAs? (revoke is easier, intermediate is accessible over the network)
 - Where do you think our root CA is located?
-#### X.509 Extensions
+#### Certificate fields
 - What is the X.509 format? (set of extensions for certificates, CSR's, CRL's)
 - What is a serial number? Is it unique? What is a thumbprint? What's the difference?
-- What is the thumbprint used for? What other name for it is there? (Identifying the certificate, fingerprint)
-- What is the signature? (the digital signature method and hash used)
+- $\color{blue}\text{Not Needed}$ What is the thumbprint used for? What other name for it is there? (Identifying the certificate, fingerprint)
+- What is the signature algorithm? (hash plus encryption used for signing the certificate)
 - What is a CDP? (CRL distribution point, the endpoint to get the CRL)
-- What is the not before and not after fields? Why do they exist?
+- What is the expiration time of a certificate? What is the start time?
 - What is the Issuer and subject fields? How do they look? (look like a common name)
-	- What is the subject field used for? Is there another field for that purpose? (verify name of the service accessed, the SAN can also be useful)
-- What is the SAN field? What can be a part of it? (Email, DNS, IP, URI)
-	- What is the SAN field used for? (verify service)
-	- What is the difference between the subject field and the SAN? (SAN can hold multiple fields)
+	- Is the subject field actually used?
+- What is the SAN field? What does it stand for? What can be a part of it? (Email, DNS, IP, URI)
+	- What is the SAN field used for? (verify domain name)
+	- What is the difference between the subject field and the SAN? (SAN can hold multiple values, SAN is actually useful)
 - What is the key usage and extended key usage fields? Why do they exist? (minimize damage if certificate is compromised)
 	- Give some examples of key usages
 		- digital signature
@@ -122,19 +122,20 @@
 		- client authentication
 		- code signing
 		- email protection
-- What is the relationship between key usages and EKU? ![key-usage-extended](./Assets/eku.png)
-- Can you start a TLS session with a server that doesn't have the server authentication EKU?
-- What is the difference between a signature algorithm and a signature hash algorithm?
+- What is the difference between key usage and EKU? (EKU is more fine grained)
+- $\color{blue}\text{Not Needed}$ What is the relationship between key usages and EKU? ![key-usage-extended](./Assets/eku.png)
+- Can you start a TLS session with a server that doesn't have the server authentication EKU? (no, unless its critical)
 - $\color{blue}\text{Not Needed}$ How are key usages and extended key usages identified? (OID)
-- $\color{blue}\text{Not Needed}$ What is the relationship between key usages and extended key usages? Which one is applied?
-## OpenSSL
+## OpenSSL and Certutil
 - What is OpenSSL? Give some examples of things it can do
 	- It is an open source cryptographic library. It can provide TLS implementation, encryption algorithm and hash implementations, key generation, creating certificates and more
+- What is Certutil? (same)
+- What is the difference? (Linux vs Windows)
 ## TLS attacks
 - What is SSL stripping? ![SSL stripping](./Assets/ssl-stripping-attack.png)
 - What is heart bleed?
 ## Extra
 - What is the zero trust approach?
 - What is a zero knowledge proof?
-- Quantum computers
-- What component of windows handles secure communications? (SSPI's schannel)
+- Quantum computers - break TLS
+- What component of windows handles secure communications? (SSPI's Schannel)
