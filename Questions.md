@@ -1,27 +1,26 @@
 ## Encryption
-- What is encryption? (an algorithm used to transform data so that only authorized parties may be able to see it)
-- What are the uses of encryption? (protect data from being stolen or changed, 2 examples)
-	- What are some real life scenarios where you use encryption? (Whatsapp, browsing, Ubbi dubbi)
-- How does encryption protect data? Why can't I just reverse the algorithm? (There is a use of a secret key that is known only by select parties)
-- As an attacker, What would I want to gain access to?
-- When a strong encryption algorithm is used, what would we need to do to find the secret key?
-- What are some examples of encryptions? Which one is the one we prefer using today? What reasons are there for it being strong? (AES, DES, RC4. AES is currently considered the standard, their strength comes from their key size and the amount of cycles)
-	- What is the difference between AES128 and AES256, which is stronger? Why?
-	- What is the difference between DES and 3DES, which is stronger? Why?
-- $\color{Blue}\text{Not Needed}$ What is bit strength? (The magnitude of actions needed to break the encryption)
-- What is the disadvantage for too large a key size? What about the number of cycles? (slower)
-- $\color{Red}\text{Bonus}$ Why is the XOR cipher weak? (only one plaintext to break + you can guess parts of the key at a time)
-- What types of encryption are there? (Symmetric, A-Symmetric)
+- What is an encryption? Give some real life examples for usage. (algorithm to transform data so that only authorized parties to be able to use it)
+- What types of encryption are there? How does each one work? What is the difference between each one?
 - Compare Symmetric and A-Symmetric encryption
 	- Keys used
 	- Speed
 	- Key distribution
 	- Uses (encrypt data in database or file, digital signatures)
-	- Examples (Kerberos, LDAP/TLS, What's App)
 	- Algorithms (RSA, ECC, AES, DES, RC4)
+		- What algorithms are most widely used today?
+	- $\color{Red}\text{Bonus}$ Examples (Kerberos, LDAP/TLS, What's App)
 	- $\color{Red}\text{Bonus}$ Security
-- What is the problem with Symmetric encryption (regarding the shared secret)? How can you solve that problem?
+- What makes one encryption algorithm stronger then another? Why is that? (Cycles, key length, complexity)
+	- What is a brute force attack? $\color{blue}\text{Not Needed}$ Does each encryption require a brute force attack?
+- Draw a diagram of sending a message using RSA
+- What is diffie-hellman, How does it work?
+- What is the relation between A-symmetric and symmetric encryption?
+- $\color{blue}\text{Not Needed}$ What is the difference between AES128 and AES256, which is stronger? Why?
+- $\color{blue}\text{Not Needed}$ What is the difference between DES and 3DES, which is stronger? Why?
+- What is bit strength? (The magnitude of actions needed to break the encryption)
+- What is the disadvantage for too large a key size? What about the number of cycles? (slower)
 - $\color{Blue}\text{Not Needed}$ What mathematical principal does A-Symmetric encryption rely on? (integer factorization)
+- $\color{Red}\text{Bonus}$ Why is the XOR cipher weak? (only one plaintext to break + you can guess parts of the key at a time)
 ## Hash
 - What is a hashing function? (fixed size output, deterministic)
 - What are its uses? (password storage, data signature, checksum, key derivation, blockchains)
@@ -81,6 +80,7 @@
 	- Organization validation - CA also confirms the business is registered
 	- Enterprise validation - 9 rigorous steps of validation - was previously given a green highlight in a browser
 - If the certificate is sent during the TLS handshake, what's stopping me from stealing it? What doesn't the certificate contain? Where is the private key saved? What happens if someone finds it?
+- If the Root CA certificate is distributed to all clients on the network, is it enough for them to trust certificates signed by intermediate CAs?
 - $\color{blue}\text{Not Needed}$ Can you trust a certificate from the future?
 #### Certificate Revocation List
 - What is a CRL? Who publishes it?
@@ -100,7 +100,9 @@
 - What are intermediate CAs? What are root CAs? Who signs the certificates of each one?
 - You got a new computer, how is it that you trust googles certificate?
 - Why is there intermediate and root CAs? Why not only root CAs? (revoke is easier, intermediate is accessible over the network)
+- How can you distribute a root certificate?
 - Where do you think our root CA is located?
+- Is the Root CA always accessible?
 #### Certificate fields
 - What is the X.509 format? (set of extensions for certificates, CSR's, CRL's)
 - What is a serial number? Is it unique? What is a thumbprint? What's the difference?
